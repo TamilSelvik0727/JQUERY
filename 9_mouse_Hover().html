@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Mouse Events over method</title>
+</head>
+<script src="code.jquery.com_jquery-3.5.1.min.js"></script>
+
+
+<script>
+	$(document).ready(function() {
+		$("li").hover(function() {
+			$(this).append('<b>*****</b>');
+		}, function() {
+			$(this).find("b:last").remove();
+		}
+
+		);
+
+	});
+</script>
+<body>
+	<ul>
+		<li>Java</li>
+		<li>SpringBoot</li>
+		<li>SpringMvc</li>
+		<li>AngularJs</li>
+		<li>JQuery</li>
+
+	</ul>
+
+</body>
+</html>

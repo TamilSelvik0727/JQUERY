@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Selecting Element By Using Compound css selector</title>
+<script src="code.jquery.com_jquery-3.5.1.min.js"></script>
+<script>
+	$(document).ready(function() {
+		$("button").click(function() {
+			$("#joy span").css("color", "blue");
+
+		});
+
+	});
+</script>
+</head>
+<body>
+
+	<p class="joy">These are the important concepts in frontend</p>
+	<ui class="joy">
+	<li>JQuery</li>
+	<li>AngularJs</li>
+	<li>JavaScript</li>
+	</ui>
+
+	<p>These are the important concepts in BackEnd</p>
+	<ui id="joy">
+	<li>Java</li>
+	<li><span>SpringBoot</span></li>
+	<li>SpringMvc</li>
+	</ui>
+	<p>These are the important concept in both FrontEnd and BackEnd</p>
+	<ui>
+	<li>Java</li>
+	<li>SpringSecurity</li>
+	<li>AngularJs</li>
+	</ui>
+
+	<button>Click</button>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Key bord events KeyUp and KeyDown</title>
+<script src="code.jquery.com_jquery-3.5.1.min.js"></script>
+<script>
+	$(document).ready(function() {
+		/**$("h1").text("Universe");
+		var txt = "rgb(" + c1 + ",34,45)";
+		"background" : "rgb(14,34,45)"--key down **/
+
+		var c1 = 0;
+		var c2 = 0;
+		var c3 = 0;
+
+		$(document).keyup(
+			function(event) {
+			var txt;
+			
+			if (event.which == 38) {
+				txt = "rgb("+c1+","+c2+","+c3+")";
+
+				$("#joy").css({
+					"background" :txt
+				});
+				$("h1").text(txt);
+				c1++;
+			}
+			else if(event.which==40) {
+				txt = "rgb("+c1+","+c2+","+c3+")";
+
+				$("#joy").css({
+					"background" :txt
+				});
+				$("h1").text(txt);
+				c2++;
+			}
+			
+			else if(event.which==39){
+				txt = "rgb("+c1+","+c2+","+c3+")";
+
+				$("#joy").css({
+					"background" :txt
+				});
+				$("h1").text(txt);
+				c3++;
+			}
+
+		});
+
+	}
+
+	);
+</script>
+<style>
+#joy {
+	width: 300px;
+	border: 5px solid black;
+	padding: 100px;
+	margin: 100px;
+}
+
+#tamil {
+	width: 300px;
+	border: 5px solid red;
+	padding: 100px;
+	margin: 100px;
+}
+</style>
+</head>
+<body>
+	<div id="joy"></div>
+	<div id="tamil">
+		<h1></h1>
+
+	</div>
+
+
+</body>
+</html>
